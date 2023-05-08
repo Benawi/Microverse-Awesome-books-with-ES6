@@ -1,19 +1,12 @@
-import AdderRemovebooks from './JS-Classes/AdderRemovebooks.js';
-import ListBooks from './JS-Classes/listBook.js';
-import Navigation from './JS-Classes/Navigation.js';
+import AdderRemovebooks from './modules/AdderRemovebooks.js';
+import ListBooks from './modules/listBook.js';
+import Navigation from './modules/Navigation.js';
+import { DateTime } from './modules/luxon.js';
 
 const adderRemovebooks = new AdderRemovebooks();
 const listBooks = new ListBooks();
 const nav = new Navigation();
-const datetime = new Date();
-const options = { year: 'numeric', month: 'long', day: 'numeric' };
-
-const dateString = datetime.toLocaleDateString(undefined, options);
-const timeString = datetime.toLocaleTimeString();
-const dateTimeString = `${dateString} ${timeString}`;
-
-const dateTimeElement = document.getElementById('date-time');
-dateTimeElement.innerHTML = dateTimeString;
+const datetime = DateTime.now().toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
 const form = document.querySelector('form');
 
 listBooks.generate(adderRemovebooks.list(), datetime);
@@ -33,6 +26,6 @@ document.addEventListener('click', (event) => {
 
 form.addEventListener('submit', (event) => {
   adderRemovebooks.addBooks();
-  listBooks.generate(adderRemovebooks.list());
+  listBooks.generate(adderRemovebooks.list(), datetime);
   event.preventDefault();
 });
