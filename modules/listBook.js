@@ -4,12 +4,12 @@ export default class ListBooks {
     this.bookList = document.getElementById('book-list');
   }
 
-  updateSelections=(() =>{
+  updateSelections=(() => {
     this.form = document.querySelector('form');
     this.bookList = document.getElementById('book-list');
   });
 
-  generateBookCard=((bookObj) =>{
+  generateBookCard=((bookObj) => {
     this.bookCard = document.createElement('li');
     this.bookTitle = document.createElement('p');
     this.bookAuthor = document.createElement('p');
@@ -35,11 +35,11 @@ export default class ListBooks {
     return this.bookCard;
   });
 
-  clearBooksSection=(()=> {
+  clearBooksSection=(() => {
     this.bookList.innerHTML = '';
   });
 
-  displayBooksSection=((bookArray, datetime)=> {
+  displayBooksSection=((bookArray, datetime) => {
     for (let i = 0; i < bookArray.length; i += 1) {
       const bookCard = this.generateBookCard(bookArray[i]);
       this.bookList.appendChild(bookCard, datetime);
@@ -48,7 +48,7 @@ export default class ListBooks {
     date.innerText = `${datetime}`;
   });
 
-  generate=((bookArray, datetime)=> {
+  generate=((bookArray, datetime) => {
     this.clearBooksSection();
     this.displayBooksSection(bookArray, datetime);
     this.updateSelections();

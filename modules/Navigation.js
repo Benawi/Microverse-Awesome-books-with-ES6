@@ -4,7 +4,7 @@ export default class Navigation {
   }
 
   /* eslint-disable class-methods-use-this */
-  linkStyle=((link) =>{
+  linkStyle=((link) => {
     if (link.className.includes('links')) {
       link.setAttribute(
         'class',
@@ -34,7 +34,7 @@ export default class Navigation {
   }
   );
 
-  sectionChange=((section)=> {
+  sectionChange=((section) => {
     section.classList.remove('d-none');
     section.parentElement.querySelectorAll('section').forEach((element) => {
       if (element !== section && !element.className.includes('d-none')) {
@@ -43,12 +43,11 @@ export default class Navigation {
     });
   });
 
-   sectionShow=((linkNav)=> {
-    this.linkStyle(linkNav);
-    const sectionId = `section-${linkNav.id.slice(4)}`;
-    const section = document.getElementById(sectionId);
-    this.sectionChange(section);
-  
-});
+   sectionShow=((linkNav) => {
+     this.linkStyle(linkNav);
+     const sectionId = `section-${linkNav.id.slice(4)}`;
+     const section = document.getElementById(sectionId);
+     this.sectionChange(section);
+   });
 }
 /* eslint-enable class-methods-use-this */

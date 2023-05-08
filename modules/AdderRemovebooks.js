@@ -3,15 +3,13 @@ export default class AdderRemovebooks {
     this.BOOKS_DATA = JSON.parse(localStorage.getItem('books_data')) || [];
   }
 
-  list=(()=> {
-    return this.BOOKS_DATA;
-  });
+  list=(() => this.BOOKS_DATA);
 
-  setStorage=(() =>{
+  setStorage=(() => {
     localStorage.setItem('books_data', JSON.stringify(this.BOOKS_DATA));
   });
 
-  addBooks=(()=> {
+  addBooks=(() => {
     const bookTitle = document.getElementById('book-title');
     const bookAuthor = document.getElementById('book-author');
 
@@ -37,7 +35,7 @@ export default class AdderRemovebooks {
     this.setStorage();
   });
 
-  removeBook=((element) =>{
+  removeBook=((element) => {
     const textElements = element.parentElement.querySelectorAll('.book-card-text');
 
     this.BOOKS_DATA = this.BOOKS_DATA.filter((obj) => {
