@@ -44,6 +44,8 @@ export default class ListBooks {
       const bookCard = this.generateBookCard(bookArray[i]);
       this.bookList.appendChild(bookCard, datetime);
     }
+    const date = document.getElementById('date-time');
+    date.innerText = `${datetime}`;
   }
 
   generate(bookArray, datetime) {
