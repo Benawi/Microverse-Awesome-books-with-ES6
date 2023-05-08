@@ -4,7 +4,7 @@ export default class Navigation {
   }
 
   /* eslint-disable class-methods-use-this */
-  linkStyle(link) {
+  linkStyle=((link) =>{
     if (link.className.includes('links')) {
       link.setAttribute(
         'class',
@@ -32,15 +32,16 @@ export default class Navigation {
         }
       });
   }
+  );
 
-  sectionChange(section) {
+  sectionChange=((section)=> {
     section.classList.remove('d-none');
     section.parentElement.querySelectorAll('section').forEach((element) => {
       if (element !== section && !element.className.includes('d-none')) {
         element.classList.add('d-none');
       }
     });
-  }
+  });
 
    sectionShow=((linkNav)=> {
     this.linkStyle(linkNav);
