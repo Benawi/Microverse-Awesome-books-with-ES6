@@ -18,8 +18,8 @@
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
+- [🙏 Acknowledgements(#acknowledgements)
+
 - [📝 License](#license)
 
 
@@ -164,7 +164,7 @@ You can redeploy this project by adding new lines of code to source files.
 ## 👥 Authors <a name="authors"></a>
 
 ### 👤 Habtamu Alemayehu 
-- GitHub: [@bena](https://github.com/Benawi)
+- GitHub: [Benawi](https://github.com/Benawi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
