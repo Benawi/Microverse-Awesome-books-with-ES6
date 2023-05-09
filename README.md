@@ -73,7 +73,17 @@ The repository also contains files for setting up linters and validators.
  -  CSS styles Added to the application to make it match [this](https://github.com/microverseinc/curriculum-javascript/blob/main/books/images/awesome_books_full_website.png) wireframe.
  - When a user clicks on any of the links, the main area changes to display only one of the three content sections which clicked.
  - To change the contents of the page, plain JavaScript and CSS used. 
+ - ES6 syntax used.
+ - Codes divided into modules
+ - Separate file created for each module in the modules directory.
 
+- Modules imported into the main.js file including luxon. 
+
+- Functions refactored to arrow functions.
+
+- let and const used in the correct way.
+
+- Display the current date below the navigation bar by using a library [Luxon](https://moment.github.io/luxon/#/install?id=es6) .
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -155,9 +165,6 @@ You can redeploy this project by adding new lines of code to source files.
 
 ### 👤 Habtamu Alemayehu 
 - GitHub: [@bena](https://github.com/Benawi)
-
-### 👤 Jubaer hossain maruf
-- GitHub:[jubaer919] (https://github.com/jubaer919)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
