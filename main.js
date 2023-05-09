@@ -29,4 +29,3 @@ form.addEventListener('submit', (event) => {
   listBooks.generate(adderRemovebooks.list(), datetime);
   event.preventDefault();
 });
-setInterval(adderRemovebooks.list(),100);

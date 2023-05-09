@@ -50,4 +50,3 @@ export default class Navigation {
      this.sectionChange(section);
    });
 }
-/* eslint-enable class-methods-use-this */
